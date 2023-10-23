@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux"
 import Item from "./item/Item"
 import styles from "./Items.module.css"
 const Items = () => {
@@ -45,9 +46,12 @@ const Items = () => {
       }
     ]
   }
+
+  const isVIsable = useSelector( state => state.toggle.cartIsVisable)
+
   
-  return <div className={styles.wrapper}>
-    {dummyData["items"].map( (item) =>{
+  return   <div className={styles.wrapper}>
+    {  isVIsable && dummyData["items"].map( (item) =>{
        return <Item key={item["id"]} name={item["name"]} price={item["price"]}/>
     })}
   </div>
