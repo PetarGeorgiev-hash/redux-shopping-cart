@@ -1,0 +1,11 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+}
+.card{
+    width: 5rem;
+    max-width: 15rem;
+    margin: 0.5rem;
+}
